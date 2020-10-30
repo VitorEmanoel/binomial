@@ -1,9 +1,8 @@
 FROM yarnpkg/node-yarn as build-stage
 
 WORKDIR /app
-COPY package*.json /app/
+COPY . /app/
 RUN yarn install
-COPY ./ /app/
 RUN yarn build
 
 FROM nginx:1.15
