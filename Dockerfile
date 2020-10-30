@@ -1,4 +1,4 @@
-FROM yarnpkg/node-yarn as build-stage
+FROM node as build-stage
 
 WORKDIR /app
 COPY . /app/
