@@ -53,7 +53,7 @@ export const Form = () => {
         <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
             <Paper style={styles.container} square elevation={3}>
                 <Box display={"flex"} justifyContent={"center"} alignItems={"center"} flexDirection={"row"}>
-                    <TextField type={"number"} style={styles.field} label={"Chance de sucessos"} variant={"outlined"} value={successChance} onChange={e => setSuccessChance(parseFloat(e.target.value))}/>
+                    <TextField type={"number"} style={styles.field} label={"Probabilidade de successo (%)"} variant={"outlined"} value={successChance} onChange={e => setSuccessChance(parseFloat(e.target.value)/100)}/>
                     <TextField type={"number"} style={styles.field} label={"Numero de tentativas"} variant={"outlined"} value={tryCount} onChange={e => setTryCount(parseFloat(e.target.value))}/>
                     <TextField type={"number"} style={styles.field} label={"Tentativas de sucesso"} variant={"outlined"} value={successCount} onChange={e => setSuccessCount(parseFloat(e.target.value))}/>
                     <Button style={styles.button} variant={"contained"} color={"primary"}  onClick={handleCalculateClick}>Calcular</Button>
